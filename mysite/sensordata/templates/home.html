@@ -1,0 +1,94 @@
+<!-- <form action = "" method = "post">
+    {% csrf_token %}
+    {{form }}
+    <input type="submit" value=Submit">
+</form> -->
+    
+    
+<!-- <form action = "" method = "post">
+    {% csrf_token %}
+    {{form.as_p }}
+    <input type="submit" value="Submit">
+
+</form>
+<h1>Temperature: {{predict_temperature}} </h1>
+<h1>Humidity: {{predict_humidity}} </h1>
+<h1>water level: {{predict_water_level}} </h1> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body {
+			background-color: #f1f1f1;
+			font-family: Arial, sans-serif;
+		}
+		form {
+			background-color: #ffffff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #d9d9d9;
+			max-width: 500px;
+			margin: auto;
+		}
+		h1 {
+			font-size: 28px;
+			font-weight: bold;
+			margin-top: 40px;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+		.output {
+			margin-top: 40px;
+			padding: 20px;
+			background-color: #ffffff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #d9d9d9;
+			max-width: 500px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="post">
+		{% csrf_token %}
+        <div class="heading">
+            <h1>Enter the time to predict the values</h1>
+        </div>
+		<label for="id_hour">Hour:</label>
+		{{ form.hour }}
+		<label for="id_minutes">Minutes:</label>
+		{{ form.minutes }}
+		<label for="id_seconds">Seconds:</label>
+		{{ form.seconds }}
+		<input type="submit" value="Submit">
+	</form>
+	{% if predict_temperature or predict_humidity or predict_water_level %}
+	<div class="output">
+		<h1>Predicted Output</h1>
+		<p>Temperature: {{ predict_temperature }}</p>
+		<p>Humidity: {{ predict_humidity }}</p>
+		<p>Water Level: {{ predict_water_level }}</p>
+	</div>
+	{% endif %}
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sensor Data</title>
+</head>
+<body>
+    <h1>Sensor Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Temperature</th>
+                <th>Humidity</th>
+                <th>Water Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+                <tr>
+                    <td>{{ item.timestamp }}</td>
+                    <td>{{ item.temperature }}</td>
+                    <td>{{ item.humidity }}</td>
+                    <td>{{ item.water_level }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4">No data available.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

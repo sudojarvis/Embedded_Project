@@ -1,3 +1,6 @@
+## Clone the repository and follow the below steps to run the project.
+
+`git clone git@github.com:sudojarvis/Embedded_Project.git`
 ## Arduino IDE setup For NodeMCU
 
 - Open the skethxx.ino file in Arduino IDE from the arduino folder.

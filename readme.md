@@ -1,6 +1,7 @@
-## Clone the repository and follow the below steps to run the project.
+## Clone the repository and follow the below steps to run the project
 
 `git clone git@github.com:sudojarvis/Embedded_Project.git`
+
 ## Arduino IDE setup For NodeMCU
 
 - Open the skethxx.ino file in Arduino IDE from the arduino folder.
@@ -29,7 +30,6 @@ For Water level sensor:
 ## 2. Install the required libraries in Arduino IDE if you don't have them already
 
 Go to Sketch->Include Library->Manage Libraries and install the following libraries:
-
 
 - Adafruit Unified Sensor
 - Adafruit BME280 Library
@@ -70,7 +70,7 @@ go to utility.py and change the port to the same port you used in the arduino co
 
 4. run `python manage.py runserver`
 
-- go to http://localhost:8000/sensordata/ to start sensor data being stored in the database.
+- go to <http://localhost:8000/sensordata/> to start sensor data being stored in the database.
 
-- go to http://localhost:8000/home/ to forecast temperature, humidity and and water level.
+- go to <http://localhost:8000/home/> to forecast temperature, humidity and and water level.
 Enter the 24 hour format of the time you want to predict for and click on submit.

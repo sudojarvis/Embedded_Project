@@ -1,6 +1,7 @@
 ## Arduino IDE setup For NodeMCU
 
-Go to file->preferences and add below url in the "Additional Boards Manager URLs" field.
+- Open the skethxx.ino file in Arduino IDE from the arduino folder.
+- Go to file->preferences and add below url in the "Additional Boards Manager URLs" field.
 
 ```
 http://arduino.esp8266.com/stable/package_esp8266com_index.json
@@ -26,6 +27,7 @@ For Water level sensor:
 
 Go to Sketch->Include Library->Manage Libraries and install the following libraries:
 
+
 - Adafruit Unified Sensor
 - Adafruit BME280 Library
 - Adafruit_BusIO
@@ -38,6 +40,7 @@ Go to Sketch->Include Library->Manage Libraries and install the following librar
 - RTClib
 - NTPClient
 - Time
+- These libraries are also present in the arduino folder.
 
 ## Upload the code
 
@@ -47,9 +50,9 @@ Go to Sketch->Include Library->Manage Libraries and install the following librar
 ## Before running arduino code
 
 1. Change the ssid and password to your wifi network.
-2. Change the ip address to the ip address of your computer.
+2. Change the ip address to the ip address of your computer. this does not required to configure.
 3. Change the port to the port you want to use.
-go to utils.py and change the port to the same port you used in the arduino code.
+go to utility.py and change the port to the same port you used in the arduino code.
 
 ## Installation and setup required for Django server and ML model
 

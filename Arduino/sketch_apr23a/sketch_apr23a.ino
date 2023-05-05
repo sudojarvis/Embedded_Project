@@ -114,7 +114,7 @@ void loop() {
 
   String formattedTime = timeClient.getFormattedTime();
 
-  Serial.println(formattedTime);
+//  Serial.println(formattedTime);
   int hours = timeClient.getHours();
   int minutes = timeClient.getMinutes();
   int second = timeClient.getSeconds();
@@ -123,10 +123,10 @@ void loop() {
   float humidity = dht.readHumidity();
   float temperature = dht.readTemperature();
 
-  if (WiFi.status() == WL_CONNECTED) {
+//  if (WiFi.status() == WL_CONNECTED) {
 
     send_sensor_data(temperature, humidity, water_level, formattedTime, hours, minutes, second);
-  }
+//  }
 
 //  Serial.print("D3 humidity = ");
 //  Serial.println(humidity);
